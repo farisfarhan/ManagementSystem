@@ -1,0 +1,273 @@
+html {
+    height: 100%;
+}
+
+img {
+    width: 80%;
+    height: auto;
+}
+
+.wholepage {
+    height: 100%;
+    overflow: hidden;  
+    /* makes the body non-scrollable (we will add scrolling to the sidebar and main content containers) */
+    margin: 0px;
+    /*removes default style*/
+    display: flex;
+    /*enables flex content for its children*/
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+.column {
+    height: 100%;
+    /*allows both columns to span the full height of the browser window*/
+    display: flex;
+    flex-direction: column;
+    /*places the left and right headers above the bottom content*/
+}
+
+.columnLeft {
+    /* height: 100%; */
+    /*allows both columns to span the full height of the browser window*/
+    display: flex;
+    flex-direction: column;
+    /*places the left and right headers above the bottom content*/
+}
+
+#left {
+    flex-shrink: 0;
+    /*makes sure that content is not cut off in a smaller browser window*/
+    /* overflow: hidden; */
+    /* position: fixed; */
+    width: 20%;
+    /* height: 100%; */
+    background-color: #322E2F;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#right {
+    flex-shrink: 0;
+    /*makes sure that content is not cut off in a smaller browser window */
+    width: 80%;
+    /* overflow: scroll; */
+    /* overflow: -moz-scrollbars-vertical;  */
+    /* overflow-y: scroll;  */
+}
+
+.top-left {
+    display: flex;
+    flex-shrink: 0;
+    /* align-items: center; */
+    justify-content: center;
+    color: black;
+    padding: 10% 0%;
+
+}
+
+.top-right {
+    /* display: flex; */
+    flex-shrink: 0;
+    /* display: inline-flex; */
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+}
+
+
+
+.bottom {
+    display: flex;
+    flex-grow: 1;
+    /*ensures that the container will take up the full height of the parent container*/
+    /* overflow-y: auto; */
+    /*adds scroll to this container*/
+    flex-shrink: 0;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* width:20%; */
+    padding: 3% 15%;
+}
+
+.bottomLeft {
+    display: flex;
+    flex-grow: 1;
+    /*ensures that the container will take up the full height of the parent container*/
+    overflow-y: auto;
+    /*adds scroll to this container*/
+    flex-shrink: 0;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* width:20%; */
+    padding: 3% 15%;
+}
+
+.menu_items {
+    /* display: flex; */
+    /* margin-left: 80px; */
+    /* justify-content: center; */
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+}
+
+.menu_items_2 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 7px;
+    /* justify-content: space-between; */
+
+}
+
+.menu_items_3 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    color: white;
+}
+
+.router-link-active {
+    color: #11A3D9;
+}
+
+
+
+@media only screen and (max-width: 1224px) {
+    /* For mobile phones: */
+    /* .wholepage {
+        background-color: yellow;
+    } */
+
+    .wholepage {
+        height: 100%;
+        /* overflow: hidden;   */
+        /* makes the body non-scrollable (we will add scrolling to the sidebar and main content containers) */
+        margin: 0px;
+        /*removes default style*/
+        display: flex;
+        /*enables flex content for its children*/
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+    #left {
+        flex-shrink: 0;
+        /*makes sure that content is not cut off in a smaller browser window*/
+        overflow: hidden;
+        /* position: fixed; */
+        width: 100%;
+        height: 15%;
+        background-color: #322E2F;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+        align-items: center;
+    }
+
+    #right {
+        flex-shrink: 0;
+        /*makes sure that content is not cut off in a smaller browser window */
+        width: 100%;
+        height: 80%;
+        /* overflow: scroll; */
+    }
+
+    .columnLeft {
+        height: 100%;
+        /*allows both columns to span the full height of the browser window*/
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /*places the left and right headers above the bottom content*/
+        align-items: center;
+    }
+
+
+    .top-left {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        /* align-items: center; */
+        color: black;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+
+    }
+
+    .top-menu {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        /* align-items: center; */
+        color: black;
+        align-items: center;
+
+    }
+
+    img {
+        width: 20%;
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    img {
+        width: 35%;
+        height: auto;
+    }
+}
+
+.example-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.619);
+    background-color: transparent;
+}
+
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    /* background-color: #322E2F; */
+}
+
+.example-sidenav {
+    height: 100%;
+    padding: 20px;
+    background-color: #322E2F;
+    width: 60%;
+    color: black;
+}

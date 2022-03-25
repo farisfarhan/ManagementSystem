@@ -1,0 +1,88 @@
+mat-button{
+    display: flex;
+    align-items: center;
+}
+
+.editButtonContainer{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    flex-basis: 300px;
+}
+
+.pageTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.detailsContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px 40px;
+}
+
+.imageContainer{
+    height: auto;
+    left: 0px;
+    right: 0px;
+    flex-basis: 300px;
+}
+
+
+#myImage{
+    width: 100%;
+    height: auto;
+    left: 0px;
+    right: 0px;
+    
+    border-radius: 120px;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+.detailsContentContainer{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+}
+.detailsContainer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+    justify-content: center;
+}
+
+.details{
+    line-height: 30px;
+}
+
+mat-button .detailsContainer{
+    justify-content: center;
+}
+#center{
+    display: flex;
+    justify-content: center;
+}
+
+::placeholder{
+    text-align: center;
+}
+
+input{
+    text-align: center;
+}
+/* 
+input{
+    border: none; /* <-- This thing here */
+    /* border:solid 1px #ccc; */
+    /* border-radius: 5px; */
+/* } */ 
+
+@media only screen and (max-width: 400px){
+    .page_title{
+      font-size: 16px;
+    }
+  }

@@ -1,0 +1,82 @@
+mat-button {
+    display: flex;
+    align-items: center;
+}
+
+.editButtonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.pageTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.detailsContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px 100px;
+    padding-bottom: 100px;
+}
+
+.imageContainer {
+    height: auto;
+    left: 0px;
+    right: 0px;
+    flex-basis: 150px;
+}
+
+#myImage {
+    width: 100%;
+    height: auto;
+    left: 0px;
+    right: 0px;
+
+    border-radius: 100px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.detailsText {
+    vertical-align: middle;
+}
+
+.detailsContentContainer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 400px;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+}
+
+.details {
+    line-height: 30px;
+}
+
+input {
+    border-radius: 20px;
+    height: 30px;
+}
+
+@media only screen and (max-width: 400px) {
+    input {
+        border-radius: 20px;
+        width: 115px;
+        height: 30px;
+    }
+}

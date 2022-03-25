@@ -1,0 +1,21 @@
+<div>
+    <h5 style="color: rgb(57, 57, 57);" class="page_title">USER CREATE</h5>
+</div>
+<br>
+
+<div class="detailsContainer">
+    <form (ngSubmit) = "onSubmit2(ff)" #ff="ngForm" >
+            <div class="form-group">
+                <div class="form-group">
+                    <input class="form-control" type="text" ngModel name = "username" placeholder = "username" > 
+                    <input class="form-control" type="text" ngModel name = "password" placeholder = "password" > 
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" ngModel name = "email" placeholder = "email" required> 
+            </div>
+            <div id="center">
+                <button mat-raised-button style="background-color: #008042;" type="submit" >Save</button>
+            </div>
+    </form>
+</div>

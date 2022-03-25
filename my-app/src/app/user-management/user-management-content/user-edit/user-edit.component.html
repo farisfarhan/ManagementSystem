@@ -1,0 +1,44 @@
+<div class="user_list_page" ng-init = "mycontent = content">
+    <div>
+        <h5 style="color: rgb(57, 57, 57);"  class="page_title" >USER EDIT</h5>
+    </div>
+    <br>
+
+    <mat-table [dataSource]="dataSource2" matSort class="user_list_table">
+
+        <ng-container matColumnDef="username">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Username </mat-header-cell>
+            <mat-cell *matCellDef="let user2" [routerLink]="['/userManagement/userEdit/userView', user2._id]"
+                (click)="openEdit(content)"> {{user2.username}} </mat-cell>
+        </ng-container>
+
+
+        <ng-container matColumnDef="password">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Password </mat-header-cell>
+            <mat-cell *matCellDef="let user2" [routerLink]="['/userManagement/userEdit/userView', user2._id]"
+                (click)="openEdit(content)"> {{user2.password}} </mat-cell>
+        </ng-container>
+
+
+        <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+            <mat-cell *matCellDef="let user2" [routerLink]="['/userManagement/userEdit/userView', user2._id]"
+                (click)="openEdit(content)"> {{user2.email}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns2"></mat-header-row>
+        <mat-row matRipple *matRowDef="let user2; columns: displayedColumns2;"></mat-row>
+        <div class="no_user_found" *matNoDataRow>No user found matching the filter.</div>
+        <!-- <mat-column *matColDef="let user; columns: editColumn;" [routerLink]="['/userManagement/userList/userView', user.id]" (click)="openEdit(content)"></mat-column> -->
+
+    </mat-table>
+
+
+</div>
+
+
+<ng-template #content let-modal>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</ng-template>

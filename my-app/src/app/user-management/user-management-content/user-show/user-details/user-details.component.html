@@ -1,0 +1,115 @@
+
+
+<ng-template [ngIf] = "showRequest == 'show'">
+    <div class="pageTitle">{{user2.username}} (User Details)</div>
+    <div class="detailsContent">
+        
+        <div class="imageContainer" >
+            <img src="https://cdn.vox-cdn.com/thumbor/UNwAJoM8e6nbSuBccxj_33Ca7eM=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22005398/disney_robot.jpg" alt="Robog" id="myImage">
+        </div>
+        <div class="detailsContentContainer">
+            <br>
+            <div class="detailsContainer">
+                <div class="details">
+                    <ul>
+                        <li>
+                            <i class="material-icons-outlined" matRipple>
+                                badge
+                            </i>
+                            <div class="detailsText">Username</div>  
+                        </li>
+                        <li>
+                            <i class="material-icons-outlined" matRipple>
+                                key
+                            </i>
+                            <div class="detailsText">Password</div> 
+                        </li>
+                        <li>
+                            <i class="material-icons-outlined" matRipple>
+                                email
+                            </i>
+                            <div class="detailsText">Email</div> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="details">
+                    <ul>
+                        <li>  {{user2.username}} </li>
+                        <li>  {{user2.password}} </li>
+                        <li>  {{user2.email}} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="editButtonContainer">
+            <button mat-fab style="
+            border-radius: 35;
+            background-color: #CCCCCC;" 
+            (click) = "changeShowRequest()" class="buttonup"><i class="material-icons-outlined">
+                edit
+            </i></button>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template [ngIf] = "showRequest == 'edit'">
+    
+    <div class="pageTitle"> {{user2.username}} (User Details)</div>
+    <div class="detailsContent">
+
+        <div class="imageContainer" >
+            <img src="https://cdn.vox-cdn.com/thumbor/UNwAJoM8e6nbSuBccxj_33Ca7eM=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22005398/disney_robot.jpg" alt="Robog" id="myImage">
+        </div>
+        
+        <div class="detailsContentContainer">
+            <br>
+            <div class="detailsContainer">
+                <div class="details">
+                    <ul>
+                        <li>
+                            <i class="material-icons-outlined" matRipple>
+                                badge
+                            </i>
+                            <div class="detailsText">Username</div> 
+                        </li>
+                        <li>
+                            <i class="material-icons-outlined" matRipple>
+                                key
+                            </i>
+                            <div class="detailsText">Password</div>
+                        </li>
+                        <li>
+                            <i class="material-icons-outlined" matRipple>
+                                email
+                            </i>
+                            <div class="detailsText">Email</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="details">
+                    <ul>
+                    <form (ngSubmit) = "onSubmit(f)" #f="ngForm">
+                        <li>  <input type="text"  [ngModel]="user2.username" name = "username" > </li>
+                        <li>   <input type="text"  [ngModel]="user2.password" name = "password" ></li>
+                        <li>  <input type="text"  [ngModel]="user2.email" name = "email" > </li>
+                        <br>
+                        <button mat-raised-button style="background-color: #008042;" type="submit">Save</button>
+                    </form>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="editButtonContainer">
+            <button mat-fab style="
+                border-radius: 35;
+                background-color: #0777A0;"
+            (click) = "changeShowRequest()" class="buttonup"><i class="material-icons-outlined">
+                edit
+            </i></button>
+        </div>
+    </div>
+</ng-template>
+
+<div style="width: 100%; border-radius: 10px; text-align: center; background-color: #a1ff92; padding: 0;" *ngIf = "success">
+    {{user2.username}}'s details updated!
+</div>

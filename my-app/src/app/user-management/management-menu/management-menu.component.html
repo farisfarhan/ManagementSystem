@@ -1,0 +1,86 @@
+<div class="user_manage_page">
+    <div class="page_title">
+        <h5 style="color: rgb(57, 57, 57);" class="page_title">USER MANAGEMENT
+        </h5>
+    </div>
+    <br>
+    <mat-divider></mat-divider>
+    <div class="top">
+        <div class="top_items" matRipple routerLink="userList" routerLinkActive="router-link-active"
+            [class.mat-elevation-z2]="true" [class.mat-elevation-z8]="false">
+            <div class="button_top">
+                <div class="button_top_left" *ngIf="!isMobileLayout">
+                    <i class="material-icons-round" id="menu-icons">
+                        group
+                    </i>
+                </div>
+                <div class="button_top_right">USER LIST</div>
+            </div>
+
+            <div class="button_bottom" *ngIf="!isMobileLayout">
+                <p>Total users: 2</p>
+                <p>Average new user/month: 2</p>
+            </div>
+        </div>
+        <div class="top_items" matRipple routerLink="userEdit" routerLinkActive="router-link-active"
+            [class.mat-elevation-z2]="true" [class.mat-elevation-z8]="false">
+            <div class="button_top">
+                <div class="button_top_left" *ngIf="!isMobileLayout">
+                    <i class="material-icons-round" id="menu-icons">
+                        edit
+                    </i>
+                </div>
+                <div class="button_top_right">USER EDIT</div>
+            </div>
+
+            <div class="button_bottom" *ngIf="!isMobileLayout">
+                <p>Recently edited: goku</p>
+            </div>
+        </div>
+        <div class="top_items" matRipple routerLink="userCreate" routerLinkActive="router-link-active"
+            [class.mat-elevation-z2]="true" [class.mat-elevation-z8]="false">
+            <div class="button_top">
+                <div class="button_top_left" *ngIf="!isMobileLayout">
+                    <i class="material-icons-round" id="menu-icons">
+                        add
+                    </i>
+                </div>
+                <div class="button_top_right">USER CREATE</div>
+            </div>
+
+            <div class="button_bottom" *ngIf="!isMobileLayout">
+                <p>Recently created: robo400:</p>
+            </div>
+        </div>
+        <div class="top_items" matRipple routerLinkActive="router-link-active" [class.mat-elevation-z2]="true"
+            [class.mat-elevation-z8]="false">
+            <div class="button_top">
+                <div class="button_top_left" *ngIf="!isMobileLayout">
+                    <i class="material-icons-round" id="menu-icons">
+                        add
+                    </i>
+                </div>
+                <div class="button_top_right">USER BULK</div>
+            </div>
+        </div>
+        <div class="top_items" matRipple routerLinkActive="router-link-active" [class.mat-elevation-z2]="true"
+            [class.mat-elevation-z8]="false">
+            <div class="button_top">
+                <div class="button_top_left" *ngIf="!isMobileLayout">
+                    <i class="material-icons-round" id="menu-icons">
+                        add
+                    </i>
+                </div>
+                <div class="button_top_right">GENERATE</div>
+            </div>
+
+        </div>
+
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="bottom">
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</div>

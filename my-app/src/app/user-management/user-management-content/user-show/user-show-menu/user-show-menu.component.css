@@ -1,0 +1,74 @@
+.user_view_page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(201, 17, 17, 0);
+  border-radius: 50px;
+}
+
+.example-card {
+  background-color: white;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+mat-card-header {
+  background-color: #322E2F;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+mat-card-content {
+  padding: 10px 10px;
+  height: 90%;
+  overflow: hidden;
+  background-color: rgba(201, 17, 17, 0);
+}
+
+.user_view_menu {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
+
+.mat-divider {
+  border-top-color: rgba(0, 0, 0, 0.612);
+  border-top-width: 1px;
+}
+
+.user_view_menu_container {
+  padding: 30px 100px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.menuButton {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  width: 75px;
+  border-radius: 55px;
+  align-items: center;
+}
+
+.router-link-active {
+  background-color: #11A3D9;
+  border: 1px solid #322E2F;
+}
+
+@media only screen and (max-width: 1000px) {
+  .user_view_menu_container {
+    padding: 30px 30px;
+  }
+}

@@ -1,0 +1,190 @@
+.user_manage_page {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.top_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    width: 200px;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+    background-color: #CCCCCC;
+    padding: 10px;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    /* border-radius: 10px; */
+}
+
+.button_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #322E2F;
+}
+
+.button_bottom {
+    display: flex;
+    flex-direction: column;
+    line-height: 20%;
+    font-size: small;
+    color: #322E2F;
+}
+
+.button_top_right {
+    /* height: 100%; */
+    color: #322E2F;
+}
+
+.bottom {
+    color: black;
+}
+
+.router-link-active {
+    background: #11A3D9;
+    /* color: #322E2F; */
+    color: #322E2F;
+}
+
+a {
+    color: inherit;
+}
+
+.mat-divider {
+    /* margin-left: 5%; */
+    border-top-color: rgba(0, 0, 0, 0.612);
+    border-top-width: 2px;
+}
+
+#menu-icons {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 1224px) {
+
+    .top_items {
+        display: flex;
+        /* flex-direction: column;*/
+        justify-content: center;
+        align-items: center;
+        /* padding: 10px; */
+        height: 70px;
+        width: 200px;
+        color: inherit;
+        text-decoration: none;
+        border: 1px solid grey;
+        background-color: #CCCCCC;
+        padding: 10px;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+        /* border-radius: 10px; */
+    }
+
+    .button_top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    .button_top_right {
+        /* height: 100%; */
+        color: #322E2F;
+    }
+
+    .router-link-active {
+        background: #11A3D9;
+        /* color: #322E2F; */
+        color: #322E2F;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .page_title {
+        font-size: 16px;
+    }
+
+    .top_items {
+        display: flex;
+        /* flex-direction: column;*/
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        /* padding: 10px; */
+        height: 70px;
+        width: 300px;
+        color: inherit;
+        text-decoration: none;
+        border: 1px solid grey;
+        background-color: #CCCCCC;
+        padding: 10px;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
+                                      supported by Chrome, Edge, Opera and Firefox */
+        /* border-radius: 10px; */
+    }
+
+    .button_top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    .button_top_right {
+        /* height: 100%; */
+        color: #322E2F;
+        font-size: 3.5vw;
+    }
+
+    .router-link-active {
+        background: #11A3D9;
+        /* color: #322E2F; */
+        color: #322E2F;
+    }
+}

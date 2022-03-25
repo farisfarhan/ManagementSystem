@@ -1,0 +1,256 @@
+<div class="wholepage">
+
+    <div id="left" class="columnLeft">
+        <div class="top-left">
+            <img src="assets/icycle.png">
+            <i class="material-icons-outlined" style="color: white; width: 20%; text-align: center;" matRipple
+                *ngIf="isMobileLayout" mat-button (click)="drawer.toggle()">
+                menu
+            </i>
+
+        </div>
+        <div class="bottomLeft" *ngIf="!isMobileLayout">
+            <div class="menu_items">
+                <div class="menu_items_2">
+                    <i class="material-icons-outlined" matRipple>
+                        dashboard
+                    </i>
+                    <p matRipple>Dashboard</p>
+                </div>
+            </div>
+            <div class="menu_items">
+                <div class="menu_items_2">
+                    <i class="material-icons-outlined" matRipple>
+                        work
+                    </i>
+                    <p matRipple>Managements</p>
+                </div>
+
+                <div class="menu_items_3" routerLink="userManagement" routerLinkActive="router-link-active">
+                    <div matRipple>User Management</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="right" class="column">
+        <div class="top-right">
+            <mat-drawer-container class="example-container">
+                <mat-drawer #drawer class="example-sidenav" mode="push" [autoFocus]="false">
+                    <div class="bottomLeft">
+                        <div class="menu_items">
+                            <div class="menu_items_2">
+                                <i class="material-icons-outlined" matRipple>
+                                    dashboard
+                                </i>
+                                <p matRipple>Dashboard</p>
+                            </div>
+
+                        </div>
+
+                        <div class="menu_items">
+                            <div class="menu_items_2">
+                                <i class="material-icons-outlined" matRipple>
+                                    work
+                                </i>
+                                <p matRipple>Managements</p>
+                            </div>
+
+                            <div class="menu_items_3" routerLink="userManagement" routerLinkActive="router-link-active"
+                                (click)="drawer.toggle()">
+                                <div matRipple>User Management</div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </mat-drawer>
+
+                <router-outlet></router-outlet>
+            </mat-drawer-container>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class ="main"> -->
+
+    <!-- <div>
+        <h1>Hello World !</h1>
+        <h2>{{title}}</h2>
+        <h3>{{name}}</h3>
+        <button (click)= "getName(myName)">Get my name</button>
+        <br><br>
+        <button (click)= "myEvent('this is click event!')">Click Me</button>
+        <br><br>
+
+        <b>Check console log for best experience xD</b><br>
+
+        <input type = "text" placeholder = "click on me and input as u desired then press enter" #box1 (keyup.enter)= "myEvent(box1.value)"><br>
+
+        <input type = "text" placeholder = "click on me and click outside of me" #box2 (blur)= "myEvent('blur event')"><br>
+
+        <h1
+        (mouseover)= "myEvent('mouseover')">
+        MouseOVER</h1>
+
+        <h1
+        (mouseleave)= "myEvent('mouseleave')">
+        MouseLEAVE</h1>
+
+        <input type = "text" #box3 placeholder = "click on me and input as u desired then press enter" (keyup.enter)= "getVal($event.target.value)"><br>
+        <h2>{{currentVal}}</h2>
+        <button (click)= "getVal(box3.value)">Getvalue</button>
+        <br><br>
+        <input type = "text" [disabled] = "disableBox" [value] = "name">
+        <br><br>
+        <input type = "text" disabled = {{disableBox}} value = {{name}}>
+        <br><br>
+        <button (click) = "enableBox()" >Enable Textbox</button>
+
+    </div> -->
+
+
+    <!-- <userList></userList> -->
+    <!-- <app-tutorial-conditional></app-tutorial-conditional>  -->
+
+    <!-- <app-tutorial-for-loop></app-tutorial-for-loop> -->
+    <!-- </div> -->
+    <!-- <app-tutorial-simple-form></app-tutorial-simple-form> -->
+    <!-- <app-property-binding></app-property-binding> -->
+    <!-- <app-style-binding></app-style-binding> -->
+
+    <!-- <app-tutorial-bootstrap></app-tutorial-bootstrap> -->
+    <!-- <app-tutorial-material></app-tutorial-material> -->
+
+    <!-- <div>
+    <h3>Loop a component call and data passed from parent to child</h3>
+    <div *ngFor = "let z of newData">
+        <app-tutorial-parent2child [data] = "x" [mama] = "mamaData" [infoBaru] = "z"></app-tutorial-parent2child>
+    </div>
+</div> -->
+
+    <!-- <div>
+    <app-tutorial-child2parent  (xyz) = "parentFunction($event)">
+    
+    </app-tutorial-child2parent>
+    <p>{{childName}}</p>
+</div> -->
+
+    <!-- <app-tutorial-pipe></app-tutorial-pipe> -->
+    <!-- <div class = "cards"> -->
+    <!-- <div>
+        <div class = "menu">
+            <span><a routerLink= "tutorialRouting1">route1</a></span>
+            <span><a routerLink= "tutorialRouting2">route2</a></span>
+            <span><a routerLink= "page3">route3</a></span>
+            <span><a routerLink= "UnknownPage">Non-existing page 1</a></span>
+            <span><a routerLink= "UnknownPage2">Non-existing page 2</a></span>
+            <br> 
+        </div>
+        <router-outlet></router-outlet>
+    </div> -->
+
+    <!-- <div class = "customDirective" appTutorialDirectiveCustomstyle>
+        This element is managed using custom (tutorialDirective)
+    </div> -->
+
+    <!-- <div class="service">name: {{newName}} <br> <b>the name 'farhan' was taken from service</b></div> -->
+
+    <!-- <div class="show list from api">
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>Title</td>
+                <td>User ID</td>
+            </tr>
+            <tr *ngFor = "let item of data2">
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.userId}}</td>
+            </tr>
+        </table>
+    </div> -->
+
+    <!-- <div class="tutorialRouting4">
+        <ul>
+            <li><a mat-raised-button  routerLink = "LogInPage">login</a></li>
+            <li>
+                <a routerLink = "ListPage">
+                    <button mat-raised-button color="primary">list</button>
+                </a>
+            </li>
+            <li><a routerLink ="what"><button mat-raised-button color="primary">what</button></a></li>
+        </ul>
+
+        <router-outlet></router-outlet>
+    </div>  -->
+
+    <!-- <div class="tutorialRouting5ModuleRouting">
+        <ul>
+            <li><a routerLink = "NewLoginPage">new login</a></li>
+            <li><a routerLink = "NewListPage">new list</a></li>
+            <li><a routerLink ="what">new what</a></li>
+        </ul>
+
+        <router-outlet></router-outlet>
+    </div> -->
+
+    <!-- <div class="tutorialGroupRouting">
+        <ul>
+            <li><a routerLink = "admin/login">admin login</a></li>
+            <li><a routerLink = "admin/list">admin list</a></li>
+            <li><a routerLink = "user/login"> user login</a></li>
+            <li><a routerLink = "user/list"> user list</a></li>
+        </ul>
+
+        <router-outlet></router-outlet>
+    </div> -->
+
+    <!-- <div class="lazyloading1">
+        <ul>
+            <li><a routerLink = "admin/login">admin login</a></li>
+            <li><a routerLink = "lazyloading/admin/login">lazyloading admin login</a></li>
+            <li><a routerLink = "admin/list">admin list</a></li>
+            <li><a routerLink = "lazyloading/admin/list">lazyloading admin list</a></li>
+
+            <li><a routerLink = "user/login"> user login</a></li>
+            <li><a routerLink = "lazyloading/user/login"> lazyloading user list</a></li>
+            <li><a routerLink = "user/list"> user list</a></li>
+            <li><a routerLink = "lazyloading/user/login">lazyloading user login</a></li>
+            
+        </ul>
+
+        <router-outlet></router-outlet>
+    </div> -->
+
+
+
+
+    <!-- </div> -->
+    <!-- <app-qrscanner></app-qrscanner> -->
+    <!-- <div class="typescriptModule">
+    <div>
+        <ul>
+            <li> <a routerLink = "typescript/ts2"> Typescript tutorial 2</a></li>
+            <li> <a routerLink = "typescript/huha"> Not created page</a></li>
+       </ul> 
+
+    </div>
+   
+    <div><router-outlet></router-outlet></div>
+   
+</div> -->
+    <!-- <app-user-management></app-user-management> -->
+
+
+
+    <!-- </div> -->
+
+    <!-- <div class = "footer">
+    <app-tutorial-footer></app-tutorial-footer>
+</div> -->
+
+
+</div>

@@ -1,0 +1,100 @@
+<div class="user_list_page" ng-init="mycontent = content">
+    <div>
+        <h5 style="color: rgb(57, 57, 57);" class="page_title">USER LIST</h5>
+    </div>
+    <br>
+
+    <div class="user_list_content">
+
+        <div class="user_list_table">
+        <mat-table [dataSource]="dataSource2" matSort class="table_">
+
+            <ng-container matColumnDef="username">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Username </mat-header-cell>
+                <mat-cell *matCellDef="let user2" [routerLink]="['/userManagement/userList/userView', user2._id]"
+                    (click)="open(content)"> {{user2.username}} </mat-cell>
+            </ng-container>
+
+
+            <ng-container matColumnDef="password">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Password </mat-header-cell>
+                <mat-cell *matCellDef="let user2" [routerLink]="['/userManagement/userList/userView', user2._id]"
+                    (click)="open(content)"> {{user2.password}} </mat-cell>
+            </ng-container>
+
+
+            <ng-container matColumnDef="email">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+                <mat-cell *matCellDef="let user2" [routerLink]="['/userManagement/userList/userView', user2._id]"
+                    (click)="open(content)"> {{user2.email}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="edit">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>
+                <mat-cell *matCellDef="let user2" [routerLink]="['/userManagement/userList/userView', user2._id]"
+                    (click)="openEdit(content)">
+                    <button mat-button class="editButton">
+                        <i class="material-icons-outlined" style="width: 50%;">
+                            edit
+                        </i>
+                    </button>
+                    <!-- <button mat-button class="deleteButton">
+                            <i class="material-icons-outlined" style="width: 50%;">
+                                delete
+                            </i>
+                        </button> -->
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns2"></mat-header-row>
+            <mat-row matRipple *matRowDef="let user2; columns: displayedColumns2;"></mat-row>
+            <div class="no_user_found" *matNoDataRow>No user found matching the filter.</div>
+            <!-- <mat-column *matColDef="let user; columns: editColumn;" [routerLink]="['/userManagement/userList/userView', user.id]" (click)="openEdit(content)"></mat-column> -->
+
+            </mat-table>
+            <div *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center; background: white;">
+                <mat-progress-spinner mode="indeterminate">
+                </mat-progress-spinner>
+            </div>
+
+        </div>
+
+        <div class="user_list_search">
+            <div class="user_view_menu" style="color: black;" *ngIf="isMobileLayout">
+                <input type="text" aria-label="Username" (keyup)="filterTable(filteredvalue)"
+                    [(ngModel)]="filteredvalue" class="form-control" id="filter_search" placeholder="Search User">
+            </div>
+            <br *ngIf="isMobileLayout">
+            <div class="user_view_page" *ngIf="!isMobileLayout">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                            <div class="filter_title">Filter</div> 
+
+                    </mat-card-header>
+                    <mat-card-content style="color: black;">
+                        <div class="triangle_container">
+                            <div id="triangle-down"></div>
+                        </div>
+                        <div class="user_view_menu_container">
+                            <div class="user_view_menu" style="color: black;">
+
+                                <input type="text" aria-label="Username" (keyup)="filterTable(filteredvalue)"
+                                    [(ngModel)]="filteredvalue" class="form-control" id="filter_search"
+                                    placeholder="Search User">
+                            </div>
+                        </div>
+
+                    </mat-card-content>
+                    <br>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #content let-modal>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</ng-template>

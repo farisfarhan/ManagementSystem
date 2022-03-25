@@ -1,0 +1,10 @@
+<p style="text-align: center;">RP Details Content (In progress)</p>
+<div  class= "content" id="center">
+    <form [formGroup] = 'myForm'>
+        <input type="text" formControlName = 'userName'>
+        <div class="text-danger" *ngIf = "myForm.get('userName').hasError('required') && myForm.get('userName').touched">Username is required</div>
+        <input type="text" formControlName = 'email'>
+        <div class="text-danger" *ngIf = "myForm.get('email').hasError('required') && myForm.get('email').touched">Email is required</div>
+    </form>
+</div>
+
